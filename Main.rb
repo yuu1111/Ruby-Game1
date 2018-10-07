@@ -2,9 +2,9 @@
 # coding: shift_jis
 require 'dxruby'
 
-require"./Setting.rb"
-require"./NPC.rb"
-require"./Debug.rb"
+require"./Script/Setting.rb"
+require"./Script/NPC.rb"
+require"./Script/Debug.rb"
 
 $debug = 1
 
