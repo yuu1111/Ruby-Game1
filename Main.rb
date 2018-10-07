@@ -1,19 +1,13 @@
 #! ruby -E utf-8
 require 'dxruby'
 
-#require"./Script/Setting.rb"
-#require"./Script/NPC.rb"
-#require"./Script/Debug.rb"
-
 $GAME_PATH = File.dirname(__FILE__)
+$debug = 1
+
 
 require File.expand_path( "#{$GAME_PATH}/Script/Setting.rb")
 require File.expand_path( "#{$GAME_PATH}/Script/NPC.rb")
 require File.expand_path( "#{$GAME_PATH}/Script/Debug.rb")
-
-$debug = 1
-
-
 
 
 FILENAME = 'Settings.txt'
