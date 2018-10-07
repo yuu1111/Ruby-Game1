@@ -6,8 +6,8 @@ class Npc
   def name=(name)
     @name = name
   end
-  
+
   def image
-    image = Image.load("./Image/"+name+".png")
+    image = Image.load("#{$GAME_PATH}/Image/#{name}.png")
   end
 end
