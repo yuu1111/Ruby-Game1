@@ -13,8 +13,8 @@ end
 
 
 File.open("Settings.txt"){|f|
-  Width = f.gets  # 1s–Ú
-  Height = f.gets  # 2s–Ú
+  Width = f.gets  #1è¡Œç›®
+  Height = f.gets #2è¡Œç›®
 }
 
 def kari1
@@ -24,13 +24,13 @@ end
 
 kari1
 
-#Settings.txt‚É‘‚¢‚Ä‚ ‚é”’l‚É‰ğ‘œ“x‚ğİ’è‚·‚é
+#Settings.ã«æ›¸ã„ã¦ã‚ã‚‹æ•°å€¤ã‚’ä½¿ã£ã¦è§£åƒåº¦ã‚’æ±ºã‚ã‚‹
 Window.resize(Width.to_i, Height.to_i)
 
 Window.loop do
 
-  if Input.key_push?(K_ESCAPE) then  # EscƒL[”»’è
-    break #I—¹
+  if Input.key_push?(K_ESCAPE) then  #ESCã‚­ãƒ¼åˆ¤å®š
+    break #ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã‚’é–‰ã˜ã¦çµ‚äº†ã•ã›ã‚‹
   end
 
 end
