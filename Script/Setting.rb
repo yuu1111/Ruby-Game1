@@ -1,19 +1,18 @@
 #! ruby -E utf-8
-# In Setting.rb
 require 'singleton'
 
 class Setting
   include Singleton
 
   attr_reader :width, :height
-  #ƒtƒ@ƒCƒ‹–¼‚ğ“n‚·‚Æ‚»‚Ìƒtƒ@ƒCƒ‹‚ğİ’èƒtƒ@ƒCƒ‹‚Æ‚µ‚Ä“Ç‚İ‚ñ‚Å‚­‚ê‚é‚à‚µƒtƒ@ƒCƒ‹‚ª‚È‚¢ê‡ì¬‚·‚é
+  #ãƒ•ã‚¡ã‚¤ãƒ«åã‚’æ¸¡ã™ã¨ãã®ãƒ•ã‚¡ã‚¤ãƒ«ã‚’è¨­å®šãƒ•ã‚¡ã‚¤ãƒ«ã¨ã—ã¦èª­ã¿è¾¼ã‚“ã§ãã‚Œã‚‹ã‚‚ã—ãƒ•ã‚¡ã‚¤ãƒ«ãŒãªã„å ´åˆä½œæˆã™ã‚‹
   def load(filename)
     if File.exist?(filename)
       File.open(filename) do |f|
         @width = f.gets.delete("^0-9").to_i
         @height = f.gets.delete("^0-9").to_i
       end
-    else #İ’èƒtƒ@ƒCƒ‹‚ª“Ç‚İ‚ß‚È‚©‚Á‚½‚Æ‚«‚ÍƒfƒtƒHƒ‹ƒg‚Ìİ’è‚ğ“Ç‚İ‚Ş
+    else   #è¨­å®šãƒ•ã‚¡ã‚¤ãƒ«ãŒèª­ã¿è¾¼ã‚ãªã‹ã£ãŸã¨ãã¯ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã®è¨­å®šã‚’èª­ã¿è¾¼ã‚€
       @width = 800
       @height = 600
       open(filename, 'w'){|f|

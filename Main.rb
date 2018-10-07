@@ -1,5 +1,4 @@
 #! ruby -E utf-8
-# coding: shift_jis
 require 'dxruby'
 
 #require"./Script/Setting.rb"
@@ -14,6 +13,9 @@ require File.expand_path( "#{$GAME_PATH}/Script/Debug.rb")
 
 $debug = 1
 
+
+
+
 FILENAME = 'Settings.txt'
 Setting.instance.load(FILENAME)
 
@@ -27,7 +29,7 @@ player.name = "player"
 
 Window.loop do
 
-Window.draw(100, 100, player.image)  # data.pngを描画する
+  Window.draw(100, 100, player.image)  # data.pngを描画する
 
   if Input.key_push?(K_ESCAPE) then  #ESCを押した判定
     break #ウィンドウを閉じて終了する
