@@ -10,11 +10,11 @@ module FileManager
     end
   end
 
-  def setteing_file_load
+  def setting_file_load
     if File.exist?("Settings.txt") then
       File.open("Settings.txt"){|f|
-        $Width = f.gets  #1è¡Œç›®
-        $Height = f.gets #2è¡Œç›®
+        $Width = f.gets  #1s–Ú
+        $Height = f.gets #2s–Ú
       }
     end
   end
