@@ -13,18 +13,19 @@ end
 
 
 File.open("Settings.txt"){|f|
-  Yoko = f.gets  # 1行目
-  Tate = f.gets  # 2行目
+  Width = f.gets  # 1行目
+  Height = f.gets  # 2行目
 }
 
 def kari1
-  puts Yoko
-  puts Tate
+  puts Width
+  puts Height
 end
 
 kari1
-#初期化
-Window.resize(Yoko.to_i, Tate.to_i)
+
+#Settings.txtに書いてある数値に解像度を設定する
+Window.resize(Width.to_i, Height.to_i)
 
 Window.loop do
 
