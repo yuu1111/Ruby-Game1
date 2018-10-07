@@ -1,0 +1,12 @@
+#! ruby -E utf-8
+# coding: shift_jis
+module Debug
+  def log
+    if $debug == 1 then
+    puts "DebugLog"
+    puts "èc:"+$Width
+    puts "â°:"+$Height
+  end
+end
+  module_function :log
+end

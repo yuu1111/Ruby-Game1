@@ -2,30 +2,22 @@
 # coding: shift_jis
 require 'dxruby'
 
+require"./Setting.rb"
 require"./NPC.rb"
-if File.exist?("Settings.txt") then
-else
-  open("Settings.txt", 'w'){|f|
-    f.puts '800'
-    f.puts '600'
-  }
-end
+require"./Debug.rb"
+
+$debug = 1
+
+$Width = 100
+$Height = 200
+
+FileManager.setteing_file_load
 
 
-File.open("Settings.txt"){|f|
-  Width = f.gets  #1行目
-  Height = f.gets #2行目
-}
-
-def kari1
-  puts Width
-  puts Height
-end
-
-kari1
+  Debug.log
 
 #Settings.に書いてある数値を使って解像度を決める
-Window.resize(Width.to_i, Height.to_i)
+Window.resize($Width.to_i, $Height.to_i)
 
 Window.loop do
 
