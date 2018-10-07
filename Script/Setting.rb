@@ -1,22 +1,21 @@
 #! ruby -E utf-8
-module FileManager
-  def initialize
-    if File.exist?("Settings.txt") then
-    else
-      open("Settings.txt", 'w'){|f|
-        f.puts '800'
-        f.puts '600'
-      }
-    end
-  end
+# In Setting.rb
+require 'singleton'
 
-  def setting_file_load
-    if File.exist?("Settings.txt") then
-      File.open("Settings.txt"){|f|
-        $Width = f.gets  #1çsñ⁄
-        $Height = f.gets #2çsñ⁄
-      }
+class Setting
+  include Singleton
+
+  attr_reader :width, :height
+
+  def load(filename)
+    if File.exist?(filename)
+      File.open(filename) do |f|
+        @width = f.gets.to_i
+        @height = f.gets.to_i
+      end
+    else
+      @width = 800
+      @height = 600
     end
   end
-  module_function :setteing_file_load
 end

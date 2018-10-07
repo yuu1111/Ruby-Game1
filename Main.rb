@@ -2,27 +2,23 @@
 # coding: shift_jis
 require 'dxruby'
 
-require"./Setting.rb"
-require"./NPC.rb"
-require"./Debug.rb"
+require"./Script/Setting.rb"
+require"./Script/NPC.rb"
+require"./Script/Debug.rb"
 
 $debug = 1
 
-$Width = 100
-$Height = 200
-
-FileManager.setting_file_load
-
+FILENAME = 'Settings.txt'
+Setting.instance.load(FILENAME)
 
 Debug.log
 
-#Settings.に書いてある数値を使って解像度を決める
-Window.resize($Width.to_i, $Height.to_i)
+Window.resize(Setting.instance.width, Setting.instance.height)
 
 Window.loop do
 
-  if Input.key_push?(K_ESCAPE) then  #ESCキー判定
-    break #ウィンドウを閉じて終了させる
+  if Input.key_push?(K_ESCAPE) then  #ESCを押した判定
+    break #ウィンドウを閉じて終了する
   end
 
 end
