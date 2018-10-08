@@ -1,9 +1,9 @@
-#! ruby -E utf-8
+#! ruby
 require 'dxruby'
 
 $GAME_PATH = File.dirname(__FILE__)
-$debug = 1
-$Releas_Day = "alpha"
+$DEBUG_FLAG = true
+$RELEASE_DAY = "alpha"
 
 require File.expand_path( "#{$GAME_PATH}/Script/Setting.rb")
 require File.expand_path( "#{$GAME_PATH}/Script/NPC.rb")
@@ -17,8 +17,8 @@ Setting.instance.load(FILENAME)
 
 Debug.log
 
-Window.caption = "Test #{$Releas_Day}" # ウィンドウのキャプション設定
-Window.loadIcon("#{$GAME_PATH}/Image/test.ico")
+Window.caption = "Test #{$RELEASE_DAY}" # ウィンドウのキャプション設定
+Window.load_icon("#{$GAME_PATH}/Image/test.ico")
 Window.resize(Setting.instance.width, Setting.instance.height)
 
 player = Npc.new

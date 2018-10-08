@@ -1,4 +1,4 @@
-#! ruby -E utf-8
+#! ruby
 require 'singleton'
 
 class Setting

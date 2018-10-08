@@ -1,8 +1,8 @@
-#! ruby -E utf-8
+#! ruby
 
 module Debug
   def log
-    if $debug == 1 then
+    if $DEBUG_FLAG then
       puts "DebugLog"
       puts "縦:#{Setting.instance.width.to_s}"
       puts "横:#{Setting.instance.height.to_s}"
