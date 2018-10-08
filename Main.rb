@@ -22,7 +22,7 @@ player = Npc.new
 player.name = "player"
 
 Window.loop do
-
+  Window.draw_scale( 0, 0, Image.load("#{$GAME_PATH}/Image/BackGround.png"), Setting.instance.width, Setting.instance.height)
   Window.draw(100, 100, player.image)  # data.pngを描画する
-  
+
 end
