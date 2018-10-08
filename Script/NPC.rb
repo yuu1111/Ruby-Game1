@@ -8,6 +8,6 @@ class Npc
   end
 
   def image
-    image = Image.load("#{$GAME_PATH}/Image/#{name}.png")
+    image = Image.load("#{$GAME_PATH}/Image/#{@name}.png")
   end
 end
