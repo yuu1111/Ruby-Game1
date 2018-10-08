@@ -24,7 +24,10 @@ Window.resize(Setting.instance.width, Setting.instance.height)
 player = Npc.new
 player.name = "player"
 
+GUI_Base = Image.load("#{$GAME_PATH}/Image/GUI_Base.png")
+
 Window.loop do
-  GUI.new.Draw1(player.image)
-  Window.draw_scale( 0, 0, Image.load("#{$GAME_PATH}/Image/BackGround.png"), Setting.instance.width, Setting.instance.height)
+
+  GUI.new.Draw1(100,100,GUI_Base)
+  GUI.new.DrawScale(0,0,Setting.instance.width, Setting.instance.height,Image.load("#{$GAME_PATH}/Image/BackGround.png"))
 end
