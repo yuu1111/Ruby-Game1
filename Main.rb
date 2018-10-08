@@ -7,8 +7,10 @@ $Releas_Day = "alpha"
 
 require File.expand_path( "#{$GAME_PATH}/Script/Setting.rb")
 require File.expand_path( "#{$GAME_PATH}/Script/NPC.rb")
+require File.expand_path( "#{$GAME_PATH}/Script/GUI.rb")
 require File.expand_path( "#{$GAME_PATH}/Script/Debug.rb")
 
+font = Font.new(32)       # フォント生成
 
 FILENAME = 'Settings.txt'
 Setting.instance.load(FILENAME)
@@ -23,7 +25,6 @@ player = Npc.new
 player.name = "player"
 
 Window.loop do
+  GUI.new.Draw1(player.image)
   Window.draw_scale( 0, 0, Image.load("#{$GAME_PATH}/Image/BackGround.png"), Setting.instance.width, Setting.instance.height)
-#  Window.draw(100, 100, player.image)  # data.pngを描画する
-
 end
