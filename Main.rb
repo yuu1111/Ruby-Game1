@@ -3,7 +3,7 @@ require 'dxruby'
 
 $GAME_PATH = File.dirname(__FILE__)
 $debug = 1
-
+$Releas_Day = "alpha"
 
 require File.expand_path( "#{$GAME_PATH}/Script/Setting.rb")
 require File.expand_path( "#{$GAME_PATH}/Script/NPC.rb")
@@ -15,6 +15,7 @@ Setting.instance.load(FILENAME)
 
 Debug.log
 
+Window.caption = "Test #{$Releas_Day}" # ウィンドウのキャプション設定
 Window.loadIcon("#{$GAME_PATH}/Image/test.ico")
 Window.resize(Setting.instance.width, Setting.instance.height)
 
@@ -23,6 +24,6 @@ player.name = "player"
 
 Window.loop do
   Window.draw_scale( 0, 0, Image.load("#{$GAME_PATH}/Image/BackGround.png"), Setting.instance.width, Setting.instance.height)
-  Window.draw(100, 100, player.image)  # data.pngを描画する
+#  Window.draw(100, 100, player.image)  # data.pngを描画する
 
 end
