@@ -1,0 +1,18 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    dxruby (1.4.5)
+    ocra (1.3.10)
+
+PLATFORMS
+  x86-mingw32
+
+DEPENDENCIES
+  dxruby
+  ocra
+
+RUBY VERSION
+   ruby 2.3.3p222
+
+BUNDLED WITH
+   1.16.6
