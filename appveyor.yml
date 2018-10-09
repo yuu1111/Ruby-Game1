@@ -5,7 +5,7 @@ cache:
 
 
 install:
-  - set PATH=C:\Ruby2.3.3\bin;%PATH%
+- set PATH=C:\Ruby23\bin;%PATH%
   - bundle config --local path vendor/bundle
   - bundle install
 
