@@ -17,4 +17,6 @@ before_test:
   - bundle -v
 
 test_script:
+  - bundle install
+  - gem install ocra@-v 1.3.10
   - ocra --windows main.rb Image Script
